@@ -1,0 +1,19 @@
+<nav>
+    <ul>
+        <li class="navBar" *ngFor="let sng of mysongs; let i=index" id="{{i}}" (click)="onClick(i)">
+            <strong>{{sng.songName}}</strong></li>
+    </ul>
+</nav>
+ <br>
+<div class="gridArea" id="songArea" *ngFor="let sng of mysongs;" style="display :none;" >
+    <div class="songInfo" id="info">
+        <strong>Song Name:</strong> {{sng.songName}}<br><br>
+        <strong>Artist:</strong> {{sng.artist}}<br><br>
+        <strong>Genre:</strong> {{sng.genre}}<br><br>
+        <strong>Year Released:</strong> {{sng.yearReleased}}<br>
+    </div>
+    <div class="imgArea">
+        <img id="img" [src]="sng.picture" />
+    </div>
+</div>
+
